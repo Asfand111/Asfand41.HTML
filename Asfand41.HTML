@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <style>
+        .container{
+            height: 100px;
+            display: flex;
+           justify-content: center;
+            font-size: 25px;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: aqua;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Current Time is <span id="time"></span>
+    </div>
+    <script>
+        console.log('this is a 41 tutorial')
+        let now = new Date();
+        console.log(now);
+        let now1 = new Date(2000);
+        console.log(now1);
+        // let newDates = new Date('2090-12-12')
+        // console.log(newDates)
+
+        // let newDates = new Date('year, month, day, hour, mint, sec')
+        let newDate = new Date(2091,11,12,5,10,20);
+        console.log(newDate);
+        let yr = newDate.getYear();
+        console.log('The year is', yr);
+        let month = newDate.getMonth();
+        console.log('The Month is', month);
+        let daye = newDate.getDay();
+        console.log('The days is', daye);
+        let mint = newDate.getMinutes();
+        console.log('The mints is', mint);
+        newDate.setDate(40)
+        console.log(newDate)
+        newDate.setMinutes(29)
+        console.log(newDate)
+
+        // ii = Date.now()
+        // console.log(ii)
+
+        function updateTime(){
+        time = new Date()
+        document.getElementById('time').innerHTML = time
+    }
+    setInterval(updateTime, 1000)
+    
+
+       
+    </script>
+</body>
+</html>
